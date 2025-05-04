@@ -1,28 +1,69 @@
-# AI Workflow Agent for Smart Government Forms 🇦🇪
+# 🤖 AI Workflow Agent for Smart Government Forms
 
-An Agentic AI application that automates the understanding, validation, and Q&A for government forms using LangChain, LangGraph, and Streamlit.
+An Agentic AI system built using LangChain, LangGraph, and Streamlit to automate triage, validation, and processing of complex government forms (PDFs).
 
-## 🔍 Features
-- 🧾 Parse and extract fields from PDF-based government forms
-- 🧠 Answer questions about forms using Retrieval-Augmented Generation (RAG)
-- ✅ Validate form content based on predefined rules
-- 🧭 Built with Agentic AI architecture using LangGraph
+---
+
+## 🔍 Problem Statement
+
+Manual processing of government forms is error-prone and time-consuming. This agent streamlines the process by:
+- Parsing uploaded PDFs
+- Validating form fields against rules
+- Answering questions from embedded content
+- Storing extracted info in vector stores for retrieval
+
+---
+
+## 🧠 Core Features
+
+- 🔄 **Agentic Workflow (LangGraph)**: Multi-step decision-making for form handling.
+- 🧾 **PDF Parser Tool**: Structured text and field extraction.
+- ✅ **Field Validator Tool**: Checks required fields, value formats, and logical dependencies.
+- 💬 **Form QnA Tool**: Allows users to ask questions based on PDF contents.
+- 🔎 **Retrieval Tool**: Vectorized retrieval from a knowledge base.
+- 🌐 **UI with Streamlit**: Upload forms, ask questions, and view results in real-time.
+
+---
+
+## 🧱 Tech Stack
+
+| Layer         | Tools Used                        |
+|---------------|----------------------------------|
+| Agent Runtime | `LangGraph`, `LangChain`         |
+| LLM Backend   | `OpenAI` (can be swapped later)  |
+| Parsing       | `PyMuPDF`, `pdfminer`, or similar|
+| UI            | `Streamlit`                      |
+| Vector Store  | `FAISS` or `Chroma`              |
+
+---
 
 ## 📁 Project Structure
-- `agents/`: Agent logic using LangGraph
-- `tools/`: Custom tools for parsing, Q&A, and validation
-- `workflows/`: Multi-step form processing flow
-- `data/`: Sample forms and knowledge base
-- `vectorstore/`: Stores embedded documents for retrieval
-- `ui/`: Streamlit interface
-- `main.py`: Application entry point
 
-## 🚀 Quick Start
+ai-workflow-agent-govforms/
+├── agents/ # Agent logic (LangGraph)
+├── tools/ # Modular tools (PDF parsing, validation, etc.)
+├── workflows/ # Agent workflow definitions
+├── ui/ # Streamlit UI
+├── data/
+│ ├── sample_forms/ # Example government forms
+│ └── knowledge_base/ # Reference materials
+├── vectorstore/ # Embeddings storage
+├── main.py # Entrypoint
+├── requirements.txt # Python dependencies
+└── .env # API keys & configs
 
-```bash
-git clone https://github.com/yourusername/ai-workflow-agent-govforms.git
-cd ai-workflow-agent-govforms
-python -m venv .venv
-.venv\Scripts\activate    # or source .venv/bin/activate on macOS/Linux
-pip install -r requirements.txt
-streamlit run ui/app.py
+
+---
+
+## 🚀 How to Run (Coming Soon)
+To be added after initial implementation.
+
+---
+
+## 📌 Status
+🧱 Setting up scaffolding and baseline logic
+
+---
+
+## ✍️ Author
+[spatnaik123](https://github.com/spatnaik123)
